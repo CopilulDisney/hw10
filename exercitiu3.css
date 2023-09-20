@@ -1,0 +1,35 @@
+:root {
+  --bg-color: linear-gradient(90deg, green, black) ;
+}
+
+@keyframes bg {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+.title {
+  background-image: var(--bg-color);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: bg 5s infinite alternate;
+  background-size: 200%;
+}
+@media (min-width: 1024px) {
+  .title {
+    font-size: 8rem;
+  }
+}
+@media (min-width: 481px) and (max-width: 1023px) {
+  .title {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 480px) {
+  .title {
+    font-size: 1rem;
+  }
+}/*# sourceMappingURL=exercitiu3.css.map */

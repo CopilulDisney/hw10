@@ -1,0 +1,29 @@
+:root {
+    --bg-color: linear-gradient(90deg, red, black)
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-image: var(--bg-color);
+    background-size: 150%;
+    animation: bg 5s infinite alternate;
+}
+
+@keyframes bg {
+    0% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
+}
+
+.container {
+    width: 50vw;
+    padding: 8px 16px;
+    background-color: white;
+}
+

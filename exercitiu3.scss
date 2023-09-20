@@ -1,0 +1,45 @@
+:root {
+    --bg-color: linear-gradient(90deg, green, black)
+}
+
+@mixin large {
+    @media (min-width: 1024px){
+        @content;
+        font-size: 8rem;
+    }
+}
+
+@mixin medium {
+    @media (min-width: 481px) and (max-width: 1023px){
+        @content;
+        font-size: 2rem;
+    }
+}
+
+@mixin small {
+    @media (max-width: 480px){
+        @content;
+        font-size: 1rem;
+    }
+}
+
+@keyframes bg {
+    0% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
+}
+
+.title {
+    @include large;
+    @include medium;
+    @include small;
+    background-image: var(--bg-color);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: bg 5s infinite alternate;
+    background-size: 200%;
+}
